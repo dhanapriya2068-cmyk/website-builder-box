@@ -4,7 +4,7 @@ import { CalendarCheck, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 import { DEPARTMENTS, DOCTORS, saveAppointment, type Appointment } from "@/lib/hospital-data";
 
-type Search = { doctor?: string; department?: string };
+type Search = { doctor?: string | undefined; department?: string | undefined };
 
 export const Route = createFileRoute("/appointments")({
   validateSearch: (search: Record<string, unknown>): Search => ({
