@@ -8,8 +8,8 @@ type Search = { doctor?: string; department?: string };
 
 export const Route = createFileRoute("/appointments")({
   validateSearch: (search: Record<string, unknown>): Search => ({
-    doctor: typeof search.doctor === "string" ? search.doctor : undefined,
-    department: typeof search.department === "string" ? search.department : undefined,
+    doctor: typeof search["doctor"] === "string" ? (search["doctor"] as string) : undefined,
+    department: typeof search["department"] === "string" ? (search["department"] as string) : undefined,
   }),
   head: () => ({
     meta: [
