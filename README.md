@@ -1,4 +1,4 @@
-# Website Builder Box
+npm install @supabase/supabase-js# Website Builder Box
 
 web site create pannum
 
